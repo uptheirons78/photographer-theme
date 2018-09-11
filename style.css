@@ -1,0 +1,15 @@
+@import url("css/home.css");
+@import url("css/navbar.css");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
