@@ -1,7 +1,3 @@
-/* @import url('css/home.css'); */
-/* @import url('css/works.css'); */
-/* @import url('css/navbar.css'); */
-
 /* GENERAL RULES */
 * {
   box-sizing: border-box;
@@ -11,19 +7,21 @@ body {
   margin: 0;
   padding: 0;
   background: #fff;
-  font-family: 'Open Sans', sans-serif;
+  font-family: sans-serif;
   font-size: 14px;
   letter-spacing: 2px;
 }
 
 .title {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 600;
+  color: #505050;
 }
 
 .paragraph {
   font-size: 14px;
   line-height: 28px;
+  color: #736e6e;
 }
 
 .title-section {
@@ -31,32 +29,41 @@ body {
 }
 
 .description-section {
-  margin: 30px;
+  margin: 35px;
 }
 
 /* NAVBAR */
 header {
-  position: absolute;
+  font-family: sans-serif;
+  /* position: absolute; */
   top: 0;
   left: 0;
-  padding: 0 50px;
+  padding: 20px 50px;
   background: #fff;
   width: 100%;
   box-sizing: border-box;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); */
 }
 
 header .logo {
   height: 50px;
   line-height: 50px;
-  font-size: 24px;
+  font-size: 18px;
   float: left;
+  margin-bottom: 5px;
 }
 
 header .logo a {
-  color: #262626;
+  color: #505050;
   text-decoration: none;
   font-weight: 600;
+}
+
+header .logo .logo-description {
+  font-size: 14px;
+  color: #cecece;
+  font-weight: 600;
+  padding-left: 5px;
 }
 
 header nav {
@@ -76,9 +83,10 @@ header nav ul li {
 header nav ul li a {
   height: 50px;
   line-height: 50px;
-  font-size: 16px;
-  padding: 0 20px;
-  color: #262626;
+  font-size: 14px;
+  letter-spacing: 2px;
+  padding: 0 10px;
+  color: #cecece;
   font-weight: 600;
   text-decoration: none;
   display: block;
@@ -86,12 +94,12 @@ header nav ul li a {
 
 header nav ul li a:hover,
 header nav ul li a.active {
-  color: #fff;
-  background: #262626;
+  color: #505050;
+  
 }
 
 .menu-toggle {
-  color: #262626;
+  color: #505050;
   float: right;
   line-height: 50px;
   font-size: 24px;
@@ -100,17 +108,24 @@ header nav ul li a.active {
 }
 
 /* NAVBAR MEDIA QUERIES*/
-@media (max-width: 900px) {
+@media (max-width: 991px) {
   header {
-    padding: 0 20px;
+    padding: 0 10px;
   }
   .menu-toggle {
     display: block;
   }
 
   header .logo {
-    font-size: 22px;
+    font-size: 16px;
     font-weight: 600;
+  }
+  
+  header .logo .logo-description {
+    font-size: 12px;
+    color: #cecece;
+    font-weight: 600;
+    padding-left: 5px;
   }
 
   header nav {
@@ -223,7 +238,6 @@ a.btn.cta-btn:hover {
 section.works-main {
   padding: 50px;
   text-align: center;
-  color: #262626;
 }
 
 /******* gallery *********/
@@ -234,20 +248,55 @@ section.works-main {
   flex-direction: column;
 }
 
+.gallery a {
+  text-decoration: none;
+  color: #cecece;
+  font-size: 16px;
+  letter-spacing: 2px;
+
+}
+
 .gallery-item {
   width: 100%;
   height: 400px;
   margin-bottom: 2px;
+  background-size: cover;
+  position: relative;
 }
 
-.gallery-item-1,
-.gallery-item-3 {
-  background: url('/img/figure\ 1.jpg') no-repeat center center;
-  background-size: cover;
+.gallery-item:after {
+  position: absolute;
+  content: '';
+  background-color: rgba(0,0,0,0.15);
+  background-size: cover; /* Make overlay fit the window of our original image */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  opacity: 1; /* Make's the overlay invisible until we hover */
+  transition: .5s ease all; /* How long the transition takes */
+ }
+
+ .gallery-item:hover:after {
+   opacity: 0;
+ }
+
+
+
+.gallery-description {
+  position: absolute;
+  top: 85%;
+  left: 5%;
+  z-index: 10;
 }
-.gallery-item-2 {
-  background: url('/img/figure\ 2.jpg') no-repeat center center;
-  background-size: cover;
+/*********************************************
+                  FOOTER
+*********************************************/
+footer {
+  width: 100%;
+  color: #505050;
+  text-align: center;
 }
 
 /*********************************************
@@ -257,7 +306,7 @@ section.works-main {
 @media only screen and (min-width: 321px) and (max-width: 480px) {
   /*general*/
   .title {
-    font-size: 22px;
+    font-size: 16px;
   }
 
   .paragraph {
