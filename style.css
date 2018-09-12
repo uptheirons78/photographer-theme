@@ -1,15 +1,304 @@
-@import url("css/home.css");
-@import url("css/navbar.css");
+/* @import url('css/home.css'); */
+/* @import url('css/works.css'); */
+/* @import url('css/navbar.css'); */
 
+/* GENERAL RULES */
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
+  padding: 0;
   background: #fff;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   letter-spacing: 2px;
 }
 
+.title {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.paragraph {
+  font-size: 14px;
+  line-height: 28px;
+}
+
+.title-section {
+  margin: 25px;
+}
+
+.description-section {
+  margin: 30px;
+}
+
+/* NAVBAR */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 50px;
+  background: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+header .logo {
+  height: 50px;
+  line-height: 50px;
+  font-size: 24px;
+  float: left;
+}
+
+header .logo a {
+  color: #262626;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+header nav {
+  float: right;
+}
+
+header nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header nav ul li {
+  list-style: none;
+}
+
+header nav ul li a {
+  height: 50px;
+  line-height: 50px;
+  font-size: 16px;
+  padding: 0 20px;
+  color: #262626;
+  font-weight: 600;
+  text-decoration: none;
+  display: block;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+  color: #fff;
+  background: #262626;
+}
+
+.menu-toggle {
+  color: #262626;
+  float: right;
+  line-height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+/* NAVBAR MEDIA QUERIES*/
+@media (max-width: 900px) {
+  header {
+    padding: 0 20px;
+  }
+  .menu-toggle {
+    display: block;
+  }
+
+  header .logo {
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  header nav {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 50px);
+    background: #262626;
+    top: 50px;
+    left: -100%;
+    transition: 0.5s;
+  }
+  header nav.open {
+    left: 0;
+  }
+  header nav ul {
+    display: block;
+    text-align: center;
+  }
+  header nav ul a {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  header nav ul li a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+  }
+
+  header nav ul li a:hover {
+    background: #fff;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 16px;
+  }
+}
+
+/*********************************************
+                    HOME
+**********************************************/
+.main {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  background: url(../img/home_page.jpg) no-repeat top center;
+  position: fixed;
+  z-index: -1;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.page-title-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.page-title {
+  font-size: 24px;
+  color: #fff;
+  margin-top: 1vh;
+  font-weight: 600;
+}
+
+.cta-container.cta-container__home {
+  position: fixed;
+  top: 32%;
+  width: 100%;
+}
+
+.page-description {
+  font-size: 18px;
+  color: #fff;
+}
+
+.divider {
+  width: 100%;
+  height: 10px;
+  margin-bottom: 1vh;
+}
+
+a.btn.cta-btn {
+  text-decoration: none;
+  font-weight: 900;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 0.3rem 1.2rem;
+}
+
+a.btn.cta-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.social-icons-container {
+  position: fixed;
+  bottom: 1vh;
+  width: 100%;
+}
+.social-icons-container a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/*********************************************
+                    WORKS
+**********************************************/
+section.works-main {
+  padding: 50px;
+  text-align: center;
+  color: #262626;
+}
+
+/******* gallery *********/
+.gallery {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-item {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 2px;
+}
+
+.gallery-item-1,
+.gallery-item-3 {
+  background: url('/img/figure\ 1.jpg') no-repeat center center;
+  background-size: cover;
+}
+.gallery-item-2 {
+  background: url('/img/figure\ 2.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+/*********************************************
+                  MEDIA QUERIES
+*********************************************/
+/** MEDIA QUERIES FOR MOBILES**/
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+  /*general*/
+  .title {
+    font-size: 22px;
+  }
+
+  .paragraph {
+    font-size: 13px;
+    line-height: 26px;
+  }
+
+  .title-section {
+    margin: 25px;
+  }
+
+  .description-section {
+    margin: 30px;
+  }
+  /*home page*/
+  .main {
+    background: url(../img/viso_h_iphoneX_600x900.jpg) no-repeat top center;
+  }
+  .cta-container.cta-container__home {
+    top: 15%;
+  }
+
+  .page-description {
+    font-size: 14px;
+  }
+
+  .divider {
+    height: 2px;
+  }
+
+  a.btn.cta-btn {
+    padding: 0.3rem 1rem;
+  }
+}
+
+/** MEDIA QUERIES FOR IPAD AND TABLETS**/
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .main {
+    background: url(../img/viso_h_ipad_800x1200.jpg) no-repeat top center;
+  }
+  .cta-container.cta-container__home {
+    top: 15%;
+  }
+}
