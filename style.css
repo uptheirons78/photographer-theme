@@ -1,48 +1,42 @@
-/* GENERAL RULES */
+/*********************************************
+                  GENERAL RULES
+*********************************************/
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
+html,
 body {
-  margin: 0;
-  padding: 0;
-  background: #fff;
+  height: 100%;
   font-family: sans-serif;
   font-size: 14px;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
-.title {
-  font-size: 18px;
-  font-weight: 600;
-  color: #505050;
+.container {
+  min-height: 100%;
+  background: #fff;
 }
 
-.paragraph {
-  font-size: 14px;
-  line-height: 28px;
-  color: #736e6e;
+.main {
+  overflow: auto;
+  padding-bottom: 50px;
 }
 
-.title-section {
-  margin: 25px;
-}
-
-.description-section {
-  margin: 35px;
-}
-
-/* NAVBAR */
+/*********************************************
+                  HEADER
+*********************************************/
 header {
   font-family: sans-serif;
-  /* position: absolute; */
+  position: absolute;
   top: 0;
   left: 0;
   padding: 20px 50px;
   background: #fff;
   width: 100%;
   box-sizing: border-box;
-  /* box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); */
 }
 
 header .logo {
@@ -95,7 +89,6 @@ header nav ul li a {
 header nav ul li a:hover,
 header nav ul li a.active {
   color: #505050;
-  
 }
 
 .menu-toggle {
@@ -107,7 +100,7 @@ header nav ul li a.active {
   display: none;
 }
 
-/* NAVBAR MEDIA QUERIES*/
+/* HEADER MEDIA QUERIES*/
 @media (max-width: 991px) {
   header {
     padding: 0 10px;
@@ -120,7 +113,7 @@ header nav ul li a.active {
     font-size: 16px;
     font-weight: 600;
   }
-  
+
   header .logo .logo-description {
     font-size: 12px;
     color: #cecece;
@@ -162,7 +155,7 @@ header nav ul li a.active {
 /*********************************************
                     HOME
 **********************************************/
-.main {
+.home-main {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -172,7 +165,6 @@ header nav ul li a.active {
   text-align: center;
   background: url(../img/home_page.jpg) no-repeat top center;
   position: fixed;
-  z-index: -1;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -233,70 +225,63 @@ a.btn.cta-btn:hover {
 }
 
 /*********************************************
-                    WORKS
-**********************************************/
-section.works-main {
+                  INFO
+*********************************************/
+.main .info {
+  margin-top: 50px;
   padding: 50px;
   text-align: center;
+  letter-spacing: 1px;
+}
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #505050;
 }
 
-/******* gallery *********/
-.gallery {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
+.paragraph {
+  font-size: 14px;
+  line-height: 28px;
+  color: #736e6e;
 }
 
-.gallery a {
-  text-decoration: none;
-  color: #cecece;
-  font-size: 16px;
-  letter-spacing: 2px;
-
+.title-section {
+  margin: 25px;
 }
 
-.gallery-item {
-  width: 100%;
-  height: 400px;
-  margin-bottom: 2px;
-  background-size: cover;
+.description-section {
+  margin: 35px;
+}
+/*********************************************
+                  GALLERY
+*********************************************/
+.portfolio-gallery figure {
   position: relative;
 }
 
-.gallery-item:after {
+.portfolio-gallery figure figcaption {
   position: absolute;
-  content: '';
-  background-color: rgba(0,0,0,0.15);
-  background-size: cover; /* Make overlay fit the window of our original image */
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0;
-  opacity: 1; /* Make's the overlay invisible until we hover */
-  transition: .5s ease all; /* How long the transition takes */
- }
-
- .gallery-item:hover:after {
-   opacity: 0;
- }
-
-
-
-.gallery-description {
-  position: absolute;
-  top: 85%;
-  left: 5%;
-  z-index: 10;
+  color: #fff;
+  top: 90%;
+  left: 3%;
 }
 /*********************************************
                   FOOTER
 *********************************************/
 footer {
-  width: 100%;
-  color: #505050;
+  position: relative;
+  height: 50px;
+  margin-top: -50px;
+  clear: both;
   text-align: center;
+}
+
+footer.f-mobile {
+  display: none;
+}
+
+.f-mobile-disappear {
+  z-index: -1;
 }
 
 /*********************************************
@@ -322,8 +307,8 @@ footer {
     margin: 30px;
   }
   /*home page*/
-  .main {
-    background: url(../img/viso_h_iphoneX_600x900.jpg) no-repeat top center;
+  .home-main {
+    background: url(img/viso_h_iphoneX_600x900.jpg) no-repeat top center;
   }
   .cta-container.cta-container__home {
     top: 15%;
@@ -340,12 +325,21 @@ footer {
   a.btn.cta-btn {
     padding: 0.3rem 1rem;
   }
+  /* FOOTER */
+  footer.f-mobile {
+    display: block;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  footer.f-screen {
+    display: none;
+  }
 }
 
 /** MEDIA QUERIES FOR IPAD AND TABLETS**/
 @media only screen and (min-width: 481px) and (max-width: 768px) {
-  .main {
-    background: url(../img/viso_h_ipad_800x1200.jpg) no-repeat top center;
+  .home-main {
+    background: url(img/viso_h_ipad_800x1200.jpg) no-repeat top center;
   }
   .cta-container.cta-container__home {
     top: 15%;
