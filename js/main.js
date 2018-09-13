@@ -18,6 +18,19 @@ footerDate.forEach(item => (item.innerHTML = year));
 //slider
 $(document).ready(function() {
   $('.thing').slick({
-    arrows: true
+    arrows: true,
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          autoplay: true,
+          autoplaySpeed: 2500,
+          // fade: true,
+          cssEase: 'linear'
+        }
+      }
+    ]
   });
 });

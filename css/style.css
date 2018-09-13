@@ -229,7 +229,7 @@ a.btn.cta-btn:hover {
 *********************************************/
 .main .info {
   margin-top: 50px;
-  padding: 50px;
+  padding: 50px 50px 20px 50px;
   text-align: center;
   letter-spacing: 1px;
 }
@@ -296,7 +296,7 @@ a.btn.cta-btn:hover {
                   SLIDER
 *********************************************/
 #wrapper {
-  width: 60vw;
+  width: 70vw;
   margin: 0 auto;
   margin-bottom: 50px;
 }
@@ -305,6 +305,71 @@ a.btn.cta-btn:hover {
   width: 100%;
 }
 
+/*SLICK*/
+.slick-next {
+  right: -50px;
+  background: #262626;
+  width: 40px;
+  height: 40px;
+}
+
+.slick-next:hover {
+  right: -50px;
+  background: #262626;
+  width: 40px;
+  height: 40px;
+}
+
+.slick-prev {
+  left: -50px;
+  background: #262626;
+  width: 40px;
+  height: 40px;
+}
+.slick-prev:hover {
+  left: -50px;
+  background: #262626;
+  width: 40px;
+  height: 40px;
+}
+.slick-prev:before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f053';
+  color: #fff;
+  font-size: 30px;
+  opacity: 1;
+}
+
+.slick-next:before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f054';
+  color: #fff;
+  font-size: 30px;
+  opacity: 1;
+}
+
+.slick-dots li button:before{
+  font-family: 'slick';
+  font-size: 30px;
+  line-height: 30px;
+}
+/*********************************************
+                  PAGINATION
+*********************************************/
+.pagination-section {
+  text-align: center;
+  width: 100%;
+  margin-top: 15vh;
+  margin-bottom: 15vh;
+}
+.pagination-section a {
+  text-decoration: none;
+  color: #262626;
+  font-size: 20px;
+  line-height: 20px;
+}
 /*********************************************
                   FOOTER
 *********************************************/
@@ -374,6 +439,13 @@ footer.f-mobile {
   footer.f-screen {
     display: none;
   }
+
+  /* SLICK SLIDER*/
+  #wrapper {
+    width: 100vw;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
 }
 
 /** MEDIA QUERIES FOR IPAD AND TABLETS**/
@@ -389,36 +461,13 @@ footer.f-mobile {
   footer.f-screen {
     font-size: 12px;
   }
+
+  /*SLICK SLIDER*/
+  #wrapper {
+    width: 80vw;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+
 }
 
-/*SLICK*/
-.slick-next {
-  right: -50px;
-  background: #262626;
-  width: 40px;
-  height: 40px;
-}
-
-.slick-prev {
-  left: -50px;
-  background: #262626;
-  width: 40px;
-  height: 40px;
-}
-.slick-prev:before {
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
-  content: '\f053';
-  color: #fff;
-  font-size: 30px;
-}
-
-.slick-next:before {
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
-  content: '\f054';
-  color: #fff;
-  font-size: 30px;
-}
-
-/*style the hover ....... */
