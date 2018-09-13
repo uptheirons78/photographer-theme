@@ -13,3 +13,11 @@ const footerDate = document.querySelectorAll('.footer-date');
 const date = new Date();
 const year = date.getFullYear();
 footerDate.forEach(item => (item.innerHTML = year));
+
+//slick
+//slider
+$(document).ready(function() {
+  $('.thing').slick({
+    arrows: true
+  });
+});

@@ -291,6 +291,20 @@ a.btn.cta-btn:hover {
   top: 90%;
   left: 3%;
 }
+
+/*********************************************
+                  SLIDER
+*********************************************/
+#wrapper {
+  width: 60vw;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+#wrapper img {
+  width: 100%;
+}
+
 /*********************************************
                   FOOTER
 *********************************************/
@@ -376,3 +390,35 @@ footer.f-mobile {
     font-size: 12px;
   }
 }
+
+/*SLICK*/
+.slick-next {
+  right: -50px;
+  background: #262626;
+  width: 40px;
+  height: 40px;
+}
+
+.slick-prev {
+  left: -50px;
+  background: #262626;
+  width: 40px;
+  height: 40px;
+}
+.slick-prev:before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f053';
+  color: #fff;
+  font-size: 30px;
+}
+
+.slick-next:before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f054';
+  color: #fff;
+  font-size: 30px;
+}
+
+/*style the hover ....... */
