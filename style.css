@@ -225,7 +225,7 @@ a.btn.cta-btn:hover {
 }
 
 /*********************************************
-                  INFO
+                  INFO & CONTACT
 *********************************************/
 .main .info {
   margin-top: 50px;
@@ -251,6 +251,32 @@ a.btn.cta-btn:hover {
 
 .description-section {
   margin: 35px;
+}
+
+.description-section a {
+  text-decoration: none;
+  color: #736e6e;
+}
+.description-section a:hover {
+  color: #262626;
+}
+
+.description-section .contact-info {
+  font-weight: 600;
+}
+
+.social-icons {
+  text-align: center;
+}
+
+.social-icons a {
+  color: #736e6e;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #262626;
+  text-decoration: none;
 }
 /*********************************************
                   GALLERY
@@ -343,5 +369,10 @@ footer.f-mobile {
   }
   .cta-container.cta-container__home {
     top: 15%;
+  }
+
+  /*FOOTER*/
+  footer.f-screen {
+    font-size: 12px;
   }
 }
