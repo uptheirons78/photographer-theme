@@ -89,6 +89,7 @@ header nav ul li a {
 header nav ul li a:hover,
 header nav ul li a.active {
   color: #505050;
+  transition-delay: 0.2s;
 }
 
 .menu-toggle {
@@ -125,23 +126,25 @@ header nav ul li a.active {
     position: absolute;
     width: 100%;
     height: calc(100vh - 50px);
-    background: #262626;
+    background: #fff;
     top: 50px;
     left: -100%;
     transition: 0.5s;
   }
-  header nav.open {
+  
+  header .open {
     left: 0;
   }
   header nav ul {
     display: block;
     text-align: center;
+    margin-top: 5vh;
   }
   header nav ul a {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
   header nav ul li a {
-    color: rgba(255, 255, 255, 0.7);
+    color: #b7b3b3;
     font-size: 16px;
   }
 
@@ -179,9 +182,10 @@ header nav ul li a.active {
 
 .page-title {
   font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 2px;
   color: #fff;
-  margin-top: 1vh;
-  font-weight: 600;
+  margin-top: 4vh;
 }
 
 .cta-container.cta-container__home {
@@ -198,7 +202,7 @@ header nav ul li a.active {
 .divider {
   width: 100%;
   height: 10px;
-  margin-bottom: 1vh;
+  margin-bottom: 2vh;
 }
 
 a.btn.cta-btn {
@@ -206,17 +210,18 @@ a.btn.cta-btn {
   font-weight: 900;
   color: #fff;
   border: 2px solid #fff;
-  padding: 0.3rem 1.2rem;
+  padding: 0.5rem 1.2rem;
 }
 
 a.btn.cta-btn:hover {
   background-color: #fff;
   color: #000;
+  transition-delay: 0.1s;
 }
 
 .social-icons-container {
   position: fixed;
-  bottom: 1vh;
+  bottom: 4vh;
   width: 100%;
 }
 .social-icons-container a {
@@ -228,7 +233,8 @@ a.btn.cta-btn:hover {
                   INFO & CONTACT
 *********************************************/
 .main .info {
-  margin-top: 50px;
+  margin-top: 10vh;
+  margin-bottom: 5vh;
   padding: 50px 50px 20px 50px;
   text-align: center;
   letter-spacing: 1px;
@@ -296,7 +302,7 @@ a.btn.cta-btn:hover {
                   SLIDER
 *********************************************/
 #wrapper {
-  width: 70vw;
+  width: 65vw;
   margin: 0 auto;
   margin-bottom: 50px;
 }
@@ -308,35 +314,17 @@ a.btn.cta-btn:hover {
 /*SLICK*/
 .slick-next {
   right: -50px;
-  background: #262626;
-  width: 40px;
-  height: 40px;
-}
-
-.slick-next:hover {
-  right: -50px;
-  background: #262626;
-  width: 40px;
-  height: 40px;
 }
 
 .slick-prev {
   left: -50px;
-  background: #262626;
-  width: 40px;
-  height: 40px;
 }
-.slick-prev:hover {
-  left: -50px;
-  background: #262626;
-  width: 40px;
-  height: 40px;
-}
+
 .slick-prev:before {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   content: '\f053';
-  color: #fff;
+  color: #000;
   font-size: 30px;
   opacity: 1;
 }
@@ -345,7 +333,7 @@ a.btn.cta-btn:hover {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   content: '\f054';
-  color: #fff;
+  color: #000;
   font-size: 30px;
   opacity: 1;
 }
@@ -469,5 +457,166 @@ footer.f-mobile {
     margin-bottom: 50px;
   }
 
+}
+
+/** MEDIA QUERIES FOR IPAD AND TABLETS**/
+@media only screen and (min-width: 2000px) and (max-width: 4000px) {
+  /*HOME*/
+.page-title {
+  font-size: 40px;
+  color: #fff;
+  font-weight: 300;
+  margin-top: 4vh;
+}
+
+.cta-container.cta-container__home {
+  position: fixed;
+  top: 32%;
+  width: 100%;
+}
+
+.page-description {
+  font-size: 24px;
+  color: #fff;
+  font-weight: 300;
+}
+
+.divider {
+  width: 100%;
+  height: 10px;
+  margin-bottom: 2vh;
+}
+
+a.btn.cta-btn {
+  text-decoration: none;
+  font-weight: 900;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 0.7rem 1.2rem;
+}
+
+a.btn.cta-btn:hover {
+  background-color: #fff;
+  color: #000;
+  transition-delay: 0.1s;
+}
+
+.social-icons-container {
+  position: fixed;
+  bottom: 4vh;
+  width: 100%;
+}
+.social-icons-container a {
+  text-decoration: none;
+  color: #fff;
+}
+
+  /*FOOTER*/
+  footer.f-screen {
+    font-size: 12px;
+  }
+
+  /*SLICK SLIDER*/
+  /*********************************************
+                  SLIDER
+*********************************************/
+#wrapper {
+  width: 65vw;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+#wrapper img {
+  width: 100%;
+}
+
+/*SLICK*/
+.slick-next {
+  right: -50px;
+}
+
+.slick-prev {
+  left: -50px;
+}
+
+.slick-prev:before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f053';
+  color: #000;
+  font-size: 40px;
+  opacity: 1;
+}
+
+.slick-next:before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f054';
+  color: #000;
+  font-size: 40px;
+  opacity: 1;
+}
+
+.slick-dots li button:before{
+  font-family: 'slick';
+  font-size: 30px;
+  line-height: 30px;
+}
+  /*********************************************
+                  INFO & CONTACT
+*********************************************/
+  .main .info {
+    margin-top: 9vh;
+    margin-bottom: 5vh;
+  }
+  .title {
+    font-size: 24px;
+  }
+  
+  .paragraph {
+    font-size: 20px;
+    line-height: 40px;
+    color: #736e6e;
+  }
+  
+  .title-section {
+    margin: 25px;
+  }
+  
+  .description-section {
+    margin: 35px;
+  }
+  
+  .description-section a {
+    text-decoration: none;
+    color: #736e6e;
+  }
+  .description-section a:hover {
+    color: #262626;
+  }
+  
+  .description-section .contact-info {
+    font-weight: 600;
+    font-size: 20px;
+  }
+  
+  .social-icons {
+    text-align: center;
+  }
+  
+  .social-icons a {
+    color: #736e6e;
+    text-decoration: none;
+  }
+  
+  .social-icons a:hover {
+    color: #262626;
+    text-decoration: none;
+  }
+
+  footer.f-screen {
+    font-size: 14px;
+  }
+  
 }
 

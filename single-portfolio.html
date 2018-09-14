@@ -57,7 +57,7 @@
         <div class="description-section">
           <p class="paragraph">"To take a photograph is to partecipate in another person mortality, vulnerability, mutability. Precisely by slicing
             out this moment and freezin it, all photographs testify to time's relentless melt."</p>
-          <p class="paragraph">SUSAN SONTAG</p>
+          <p class="paragraph">Susan Sontag</p>
         </div>
       </div>
       <!--info-->
@@ -96,6 +96,29 @@
   <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="js/slick.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="">
+    //slick
+    //slider
+    $(document).ready(function() {
+      $('.thing').slick({
+        arrows: true,
+        dots: true,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              autoplay: false,
+              /*autoplaySpeed: 2500,*/
+              // fade: true,
+              cssEase: 'linear'
+            }
+          }
+        ]
+      });
+    });
+    
+  </script>
 </body>
 
 </html>

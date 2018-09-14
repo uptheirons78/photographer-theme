@@ -14,23 +14,21 @@ const date = new Date();
 const year = date.getFullYear();
 footerDate.forEach(item => (item.innerHTML = year));
 
-//slick
-//slider
 $(document).ready(function() {
-  $('.thing').slick({
-    arrows: true,
-    dots: true,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          arrows: false,
-          autoplay: true,
-          autoplaySpeed: 2500,
-          // fade: true,
-          cssEase: 'linear'
-        }
-      }
-    ]
-  });
-});
+      $('.thing').slick({
+        arrows: true,
+        dots: true,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              autoplay: true,
+              autoplaySpeed: 3500,
+              // fade: true,
+              cssEase: 'linear'
+            }
+          }
+        ]
+      });
+    });
